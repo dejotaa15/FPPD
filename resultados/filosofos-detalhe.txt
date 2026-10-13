@@ -1,0 +1,121 @@
+﻿
+
+*** DEADLOCK: nenhuma refeição nos últimos 2s ***
+  filósofo 0: segura o garfo 0, espera o garfo 1
+  filósofo 1: segura o garfo 1, espera o garfo 2
+  filósofo 2: segura o garfo 2, espera o garfo 3
+  filósofo 3: segura o garfo 3, espera o garfo 4
+  filósofo 4: segura o garfo 4, espera o garfo 0
+  abortando: os filósofos devolvem os garfos e encerram
+
+Estratégia: base | N=5 | R=1000 (1000 refeições por filósofo)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0          0                0.0              0.0
+       1          0                0.0              0.0
+       2          0                0.0              0.0
+       3          0                0.0              0.0
+       4          0                0.0              0.0
+
+total de refeições: 0 | tempo total: 4s
+refeições (mín/máx): 0/0 | índice de Jain: 0.0000
+espera média global: 0.0 µs | médias individuais (mín/máx): 0.0/0.0 µs | pior espera: 0.0 µs
+resultado: DEADLOCK detectado; simulação abortada e encerrada de forma ordenada
+goroutines ativas ao final: 1
+
+Estratégia: base | N=5 | R=1000 (1000 refeições por filósofo)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0       1000             1862.0           4445.6
+       1       1000             1871.3           4807.8
+       2       1000             1865.1           5111.7
+       3       1000             1852.5           4305.0
+       4       1000             1865.4           4524.0
+
+total de refeições: 5000 | tempo total: 3.516s
+refeições (mín/máx): 1000/1000 | índice de Jain: 1.0000
+espera média global: 1863.3 µs | médias individuais (mín/máx): 1852.5/1871.3 µs | pior espera: 5111.7 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: hierarquia | N=5 | R=1000 (1000 refeições por filósofo)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0       1000             3161.6           9827.6
+       1       1000             2011.5           6499.9
+       2       1000             1694.4           6131.5
+       3       1000             1450.4           3809.2
+       4       1000             3164.2           8903.0
+
+total de refeições: 5000 | tempo total: 4.867s
+refeições (mín/máx): 1000/1000 | índice de Jain: 1.0000
+espera média global: 2296.4 µs | médias individuais (mín/máx): 1450.4/3164.2 µs | pior espera: 9827.6 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: hierarquia | N=5 | R=1000 (5000 refeições em disputa)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0        764             3405.0          10749.4
+       1       1062             1986.2           7659.8
+       2       1147             1713.9           7159.2
+       3       1263             1435.4           3129.8
+       4        764             3431.3          10260.0
+
+total de refeições: 5000 | tempo total: 3.896s
+refeições (mín/máx): 764/1263 | índice de Jain: 0.9604
+espera média global: 2222.2 µs | médias individuais (mín/máx): 1435.4/3431.3 µs | pior espera: 10749.4 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: limite | N=5 | R=1000 (1000 refeições por filósofo)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0       1000             2494.4           8628.5
+       1       1000             2496.8           8217.7
+       2       1000             2495.5           7711.9
+       3       1000             2511.1           4630.6
+       4       1000             2469.6           4631.4
+
+total de refeições: 5000 | tempo total: 4.161s
+refeições (mín/máx): 1000/1000 | índice de Jain: 1.0000
+espera média global: 2493.5 µs | médias individuais (mín/máx): 2469.6/2511.1 µs | pior espera: 8628.5 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: limite | N=5 | R=1000 (5000 refeições em disputa)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0       1000             2523.1           4665.6
+       1       1000             2552.0           4949.9
+       2       1000             2533.7           5353.3
+       3       1000             2538.4           5952.1
+       4       1000             2524.2           5243.5
+
+total de refeições: 5000 | tempo total: 4.204s
+refeições (mín/máx): 1000/1000 | índice de Jain: 1.0000
+espera média global: 2534.3 µs | médias individuais (mín/máx): 2523.1/2552.0 µs | pior espera: 5952.1 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: garcom | N=5 | R=1000 (1000 refeições por filósofo)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0       1000             3540.0           7371.4
+       1       1000             3546.5           7630.5
+       2       1000             3540.0           7701.6
+       3       1000             3554.7           6748.1
+       4       1000             3529.4           6846.1
+
+total de refeições: 5000 | tempo total: 5.247s
+refeições (mín/máx): 1000/1000 | índice de Jain: 1.0000
+espera média global: 3542.1 µs | médias individuais (mín/máx): 3529.4/3554.7 µs | pior espera: 7701.6 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
+
+Estratégia: garcom | N=5 | R=1000 (5000 refeições em disputa)
+filósofo  refeições  espera média (µs)  espera máx (µs)
+       0        998             3534.8           7499.5
+       1       1000             3524.4           6496.1
+       2       1002             3509.2           6604.1
+       3        997             3548.1           7321.7
+       4       1003             3509.5           7141.2
+
+total de refeições: 5000 | tempo total: 5.235s
+refeições (mín/máx): 997/1003 | índice de Jain: 1.0000
+espera média global: 3525.2 µs | médias individuais (mín/máx): 3509.2/3548.1 µs | pior espera: 7499.5 µs
+resultado: todas as iterações concluídas sem deadlock
+goroutines ativas ao final: 1
